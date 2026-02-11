@@ -5,7 +5,6 @@ import { Connection } from 'mongoose';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
     MongooseModule.forRootAsync({
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
