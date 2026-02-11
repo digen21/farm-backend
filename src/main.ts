@@ -5,6 +5,15 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  // DEBUG: Print EVERYTHING in process.env
+  console.log('--- DEBUG ENV START ---');
+  console.log(process.env.MONGODB_URL); // Check specifically
+  console.log(
+    'All Env Keys:',
+    Object.keys(process.env).filter((k) => k.includes('MONGO')),
+  );
+  console.log('--- DEBUG ENV END ---');
+
   app.enableCors({
     origin: true,
     credentials: true,
