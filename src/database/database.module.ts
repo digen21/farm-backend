@@ -7,6 +7,7 @@ import { Connection } from 'mongoose';
   imports: [
     ConfigModule,
     MongooseModule.forRootAsync({
+      imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
         uri: config.getOrThrow('MONGODB_URL'),
