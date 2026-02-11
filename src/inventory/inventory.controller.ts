@@ -9,14 +9,14 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
-import { RolesGuard } from 'src/auth/guards/roles.guard';
-import { type AuthUser } from 'src/auth/strategies/jwt.strategy';
-import { Roles } from 'src/common/decorator/roles.decorator';
-import { User } from 'src/common/decorator/user.decorator';
-import { Variety } from 'src/fruits/entities/fruit.entity';
-import { FruitsService } from 'src/fruits/fruits.service';
-import { UserRole } from 'src/users/entities/user.entity';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { RolesGuard } from '../auth/guards/roles.guard';
+import { type AuthUser } from '../auth/strategies/jwt.strategy';
+import { Roles } from '../common/decorator/roles.decorator';
+import { User } from '../common/decorator/user.decorator';
+import { Variety } from '../fruits/entities/fruit.entity';
+import { FruitsService } from '../fruits/fruits.service';
+import { UserRole } from '../users/entities/user.entity';
 import { CreateInventoryRequestDto } from './dto/create-inventory.dto';
 import { UpdateInventoryDto } from './dto/update-inventory.dto';
 import { InventoryService } from './inventory.service';

@@ -7,9 +7,9 @@ import {
   Patch,
   UseGuards,
 } from '@nestjs/common';
-import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
-import { type AuthUser } from 'src/auth/strategies/jwt.strategy';
-import { User } from 'src/common/decorator/user.decorator';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { type AuthUser } from '../auth/strategies/jwt.strategy';
+import { User } from '../common/decorator/user.decorator';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UsersService } from './users.service';
 

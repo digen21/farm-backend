@@ -2,8 +2,9 @@
 import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { Request } from 'express';
-import { ROLES_KEY } from 'src/common/decorator/roles.decorator';
-import { UserRole } from 'src/users/entities/user.entity';
+
+import { ROLES_KEY } from '../../common/decorator/roles.decorator';
+import { UserRole } from '../../users/entities/user.entity';
 import { AuthUser } from '../strategies/jwt.strategy';
 
 @Injectable()
