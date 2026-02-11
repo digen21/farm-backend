@@ -19,8 +19,10 @@ async function bootstrap() {
   );
 
   app.setGlobalPrefix('api');
-
-  await app.listen(process.env.PORT!);
+  const port = process.env.PORT || 5000;
+  console.log('MONGO:', process.env.MONGODB_URL);
+  console.log('PORT:', port);
+  await app.listen(port);
 }
 
 bootstrap()
